@@ -19,3 +19,8 @@ services:
 
 volumes:
   wordle_data:
+  
+  invite:
+    build: ./invite
+    ports:
+      - "8081:80"
