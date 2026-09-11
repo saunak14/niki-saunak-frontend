@@ -10,4 +10,4 @@ RUN npm run build
 FROM nginx:alpine
 COPY --from=builder /app/dist/niki-saunak-frontend/browser /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 81
+EXPOSE 80
