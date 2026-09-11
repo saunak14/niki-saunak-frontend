@@ -17,10 +17,13 @@ services:
     volumes:
       - wordle_data:/app/data
 
-volumes:
-  wordle_data:
-  
   invite:
+    image: nikitasreenath/nikisaunak-invite:${IMAGE_TAG}
+    pull_policy: always
     build: ./invite
     ports:
       - "8081:80"
+
+
+volumes:
+  wordle_data:
